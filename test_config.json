@@ -1,0 +1,4 @@
+{
+    "SQL_LOCATION":"sql/",
+    "DB_LOCATION": "model/"
+}
