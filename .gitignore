@@ -1,2 +1,4 @@
 model/*db
 config.json
+.venv/*
+~$example_time*
