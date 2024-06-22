@@ -1,4 +1,5 @@
 model/*db
 config.json
-.venv/*
+.venv*
 ~$example_time*
+__pycache__*
