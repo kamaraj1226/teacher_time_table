@@ -1,2 +1,5 @@
 model/*db
 config.json
+.venv*
+__pycache__*
+output/*

@@ -1,15 +1,12 @@
 # Teachers Time Table
 
-### PRE INIT
-create config.json file based on test_config.json
+### ASSUMPTIONS
 
-
-## INIT
-run init.sh file to initialize all the necessary components
-    * create model directory which contains sqlite data base
-    * run db_handler file and create new table
-
+- Required excel file is located inside files directory.
+- Whole teacher time table sheet name should be **progress**
+- Total period for a day is 8
 
 ## TODO
-    * init.sh file is only for linux now need to change it to support windows machines as well 
-    * Need to add logging
+
+- Create a proper function to select the file name we want to use (something like widget for choosing file)
+- Instead of hardcoding certain values like period have a method to get all those from user if needed.
