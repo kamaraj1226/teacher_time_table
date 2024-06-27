@@ -26,7 +26,7 @@ def get_excel() -> pd.DataFrame:
     """
     Read excel and return pandas dataframe
     """
-    excel_loc = Config.EXCEL_LOCATION
+    excel_loc = Config.EXCEL_FILE
     df = pd.read_excel(excel_loc, sheet_name="progress", skiprows=[0, 1])
     return df
 

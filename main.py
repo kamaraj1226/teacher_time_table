@@ -163,23 +163,20 @@ def write_teacher_time_table(
     """
     df = pd.DataFrame.from_dict(table)
     try:
-        writer = pd.ExcelWriter(
-            Config.OUTPUT_EXCEL_LOCATION, mode="a", engine="openpyxl"
-        )
+        writer = pd.ExcelWriter(Config.EXCEL_FILE, mode="a", engine="openpyxl")
     except FileNotFoundError:
-        writer = pd.ExcelWriter(
-            Config.OUTPUT_EXCEL_LOCATION, mode="w", engine="openpyxl"
-        )
+        writer = pd.ExcelWriter(Config.EXCEL_FILE, mode="w", engine="openpyxl")
 
     with writer:
         df.to_excel(excel_writer=writer, sheet_name=staff)
 
 
-def write_all_teacher_time_table(df: pd.DataFrame, staffs: List[str]):
+def write_all_teacher_time_table(df: pd.DataFrame):
     """
     Required pandas dataframe and staff list
     for the list of staffs generate staff time table
     """
+    staffs = list(get_staff_names(df))
     staffs.sort()
     for staff in staffs:
         table = get_staff_time_table(df, staff)
@@ -199,8 +196,8 @@ def main():
 
     df = helpers.get_excel()
     df = clean_up.clean_data(df)
-    staffs = list(get_staff_names(df))
-    write_all_teacher_time_table(df, staffs)
+
+    write_all_teacher_time_table(df)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,5 @@
 model/*db
 config.json
 .venv*
-~$example_time*
 __pycache__*
 output/*

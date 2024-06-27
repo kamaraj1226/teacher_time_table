@@ -10,6 +10,7 @@ class Config:
     Ensure all the variable names are capitalized.
     """
 
-    EXCEL_LOCATION = "example_time_table.xlsx"
-    OUTPUT_EXCEL_LOCATION = "output/output_time_table.xlsx"
+    EXCEL_DIR = "files"
+    EXCEL_FILE = f"{EXCEL_DIR}/example_time_table.xlsx"
     OUTPUT_DIR = "output"
+    OUTPUT_FILE = f"{OUTPUT_DIR}/output_time_table.xlsx"
