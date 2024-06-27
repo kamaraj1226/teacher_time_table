@@ -2,9 +2,24 @@
 All the generic helper functions goes here
 """
 
+import os
+import glob
 from typing import List
 import pandas as pd
 from config import Config
+
+
+def clean_output_dir():
+    """
+    clean up output directory
+    """
+    files = glob.glob(f"{Config.OUTPUT_DIR}/*")
+    try:
+        for f in files:
+            print(f"Removing: {os.path.basename(f)}")
+            os.remove(f)
+    except PermissionError as exc:
+        raise exc
 
 
 def get_excel() -> pd.DataFrame:
