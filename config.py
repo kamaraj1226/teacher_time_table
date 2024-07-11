@@ -13,4 +13,5 @@ class Config:
     EXCEL_DIR = "files"
     EXCEL_FILE = f"{EXCEL_DIR}/example_time_table.xlsx"
     OUTPUT_DIR = "output"
-    OUTPUT_FILE = f"{OUTPUT_DIR}/output_time_table.xlsx"
+    TEACHERS_OUTPUT_FILE = f"{OUTPUT_DIR}/teachers_time_table.xlsx"
+    CLASS_OUTPUT_FILE = f"{OUTPUT_DIR}/teachers_time_table.xlsx"
